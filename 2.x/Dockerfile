@@ -8,8 +8,8 @@ COPY config/nginx/nginx.repo /etc/yum.repos.d/nginx.repo
 # Install EPEL and Remi
 RUN yum -y install http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
 
-# Enable Remi PHP 7.0
-RUN yum-config-manager --enable remi-php70
+# Enable Remi PHP 7.2
+RUN yum-config-manager --enable remi-php72
 
 # Install Supervisor, NginX, Apache, PHP and Extensions
 RUN yum -y install  nginx httpd supervisor \
